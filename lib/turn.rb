@@ -6,12 +6,5 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def valid_move?(board,index)
-  spot = index.to_i - 1
-  if !position_taken?(board,spot) && spot.between?(0..8)
-    return true
-  else
-    return false
-
-end
-end
+def input_to_index(input)
+  input.to_i - 1
